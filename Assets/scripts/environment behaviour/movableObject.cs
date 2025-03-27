@@ -28,8 +28,9 @@ public class MovableObject : MonoBehaviour
         {
             Physics.BoxCast(transform.position, transform.localScale / 2, direction, out hit, transform.rotation);
             Physics.Raycast(hit.point, -direction, out hitback, Mathf.Infinity);
-            yield return null;
+            yield return new WaitForFixedUpdate(); 
         }
+        obstacleHited = true;
         TryDestroyObstacle(hit);
         TryDestroySelf();
         TryDamageBoss();
@@ -63,7 +64,6 @@ public class MovableObject : MonoBehaviour
 
     public void StopMoving()
     {
-        obstacleHited = true;
         isMoving = false;
         selfVelocity = 0f;
     }
