@@ -1,7 +1,0 @@
-﻿wall destroy sert a rendre destructible l'object auquel on l'attache
-
-not grabbable s'ignifie que le joueur ne pourra pas tenter ni de le lancer ni de s'y accrocher
-
-movable objet permet au joueur de lancer l'bjet auquel il est attaché
-
-canDamageBoss dépend de "movableObject" et permet, compte tenu d'une certaine velocité, d'infliger 1 dégat au boss
